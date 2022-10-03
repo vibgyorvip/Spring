@@ -1,0 +1,6 @@
+Alien object created !!
+age initialzed !!
+coding ....
+10
+
+######################################################

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+    ">
+ 
+    <bean id="alien" class="com.programming.SpringDemo.Alien" autowire="byType" > 
+    <property name="age" value="10"></property>
+
+    </bean>
+    
+    <bean id="com" class="com.programming.SpringDemo.Laptop"> 
+    </bean> 
+    
+    <bean id="desktop" class="com.programming.SpringDemo.Desktop"> 
+    </bean>
+   
+</beans>
+
+
+<!-- Adding comment
+if autowire=byName then it will check with name or id
+and if autowire= byType then it will check by type of reference attribute.
+
+but in this example both com and desktop of same type i.e. computer type so will get runtimeException.
+to resolve this error have to set property .
+
+-->
